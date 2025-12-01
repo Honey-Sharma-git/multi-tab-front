@@ -1,3 +1,8 @@
+export const TEXT = {
+  HINDI: "हिन्दी",
+  ENGLISH: "English",
+} as const;
+
 export const LANGUAGES = {
   ENGLISH: {
     SELECT_STATUS: "Select Status",
@@ -13,6 +18,7 @@ export const LANGUAGES = {
     HOME: "Home",
     ABOUT: "About",
     CONTACT: "Contact",
+    CHOOSE_SYS_LANG: "Choose system language",
   },
 
   HINDI: {
@@ -26,8 +32,9 @@ export const LANGUAGES = {
     ACCOUNT: "खाता",
     VIEWS: "दृश्य",
     STATUS: "स्थिति",
-    HOME: "Home",
-    ABOUT: "About",
-    CONTACT: "Contact",
+    HOME: "होम",
+    ABOUT: "परिचय",
+    CONTACT: "संपर्क",
+    CHOOSE_SYS_LANG: "सिस्टम भाषा चुनें",
   },
-};
+} as const;

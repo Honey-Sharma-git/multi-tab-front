@@ -8,7 +8,7 @@ import Account from "../components/user-settings/account/Account";
 import { StatusContext } from "../contexts/StatusContext";
 
 const UserSettings = () => {
-  const lang = useContext(LanguageContext);
+  const { lang } = useContext(LanguageContext);
   const { status, setStatus } = useContext(StatusContext);
   const [activeTab, setActiveTab] = useState(1);
 
@@ -28,11 +28,7 @@ const UserSettings = () => {
       {activeTab === 1 && <Account />}
       {activeTab === 2 && <Views />}
       {activeTab === 3 && (
-        <Status
-          title={LANGUAGES[lang].USER_STATUS}
-          onStatusChange={onStatusChange}
-          status={status}
-        />
+        <Status onStatusChange={onStatusChange} status={status} />
       )}
 
       <button

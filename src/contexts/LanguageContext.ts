@@ -1,5 +1,12 @@
 import { createContext } from "react";
-import type { LANGUAGES } from "../constants/global-constants";
+import { LANGUAGES } from "../constants/global-constants";
 
-type LanguagesKey = keyof typeof LANGUAGES;
-export const LanguageContext = createContext<LanguagesKey>("ENGLISH");
+export type LanguagesKey = keyof typeof LANGUAGES;
+interface LanguageContextType {
+  lang: LanguagesKey;
+  setLang: (lang: LanguageContextType["lang"]) => void;
+}
+export const LanguageContext = createContext<LanguageContextType>({
+  lang: "ENGLISH",
+  setLang: () => {},
+});

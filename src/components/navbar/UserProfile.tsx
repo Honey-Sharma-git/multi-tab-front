@@ -1,7 +1,7 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { StatusContext } from "../../contexts/StatusContext";
 
-const UserProfile = () => {
+const UserProfile = memo(() => {
   console.log("UserProfile rendered");
   const { status } = useContext(StatusContext);
 
@@ -36,5 +36,5 @@ const UserProfile = () => {
       ></div>
     </figure>
   );
-};
+});
 export default UserProfile;

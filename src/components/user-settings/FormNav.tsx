@@ -10,7 +10,7 @@ interface Props {
 const FormNav = memo((props: Props) => {
   const { active, setActive } = props;
 
-  const lang = useContext(LanguageContext);
+  const {lang} = useContext(LanguageContext);
 
   const FormNav = useMemo(() => {
     return [
