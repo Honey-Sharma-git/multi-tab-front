@@ -3,6 +3,7 @@ import UserSettings from "./app/UserSettings";
 import GlobalNav from "./components/navbar/GlobalNav";
 import { LanguageContext, type LanguagesKey } from "./contexts/LanguageContext";
 import { StatusContext } from "./contexts/StatusContext";
+import ThemeProvider from "./components/ThemeProvider";
 
 const App = () => {
   const [status, setStatus] = useState<string>("Away");
@@ -18,12 +19,14 @@ const App = () => {
 
   console.log("App rendered");
   return (
-    <LanguageContext value={langValue}>
-      <StatusContext value={statusValue}>
-        <GlobalNav />
-        <UserSettings />
-      </StatusContext>
-    </LanguageContext>
+    <ThemeProvider>
+      <LanguageContext value={langValue}>
+        <StatusContext value={statusValue}>
+          <GlobalNav />
+          <UserSettings />
+        </StatusContext>
+      </LanguageContext>
+    </ThemeProvider>
   );
 };
 export default App;
