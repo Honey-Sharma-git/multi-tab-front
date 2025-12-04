@@ -10,7 +10,7 @@ interface Props {
 const FormNav = memo((props: Props) => {
   const { active, setActive } = props;
 
-  const {lang} = useContext(LanguageContext);
+  const { lang } = useContext(LanguageContext);
 
   const FormNav = useMemo(() => {
     return [
@@ -36,8 +36,8 @@ const FormNav = memo((props: Props) => {
                 onClick={() => toggleActive(nav.id)}
                 className={`p-1 px-4 border rounded-full grid place-content-center  ${
                   isActive
-                    ? "bg-pink-300"
-                    : "cursor-pointer hover:bg-pink-300 hover:border-pink-300 hover:shadow"
+                    ? "bg-tabLight dark:bg-tabDark"
+                    : "cursor-pointer hover:bg-tabLight hover:dark:bg-tabDark hover:border-tabLight hover:dark:border-tabDark hover:shadow"
                 }`}
               >
                 {nav.label}

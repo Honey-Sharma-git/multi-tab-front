@@ -22,7 +22,7 @@ const UserSettings = () => {
 
   console.log("UserSettings rendered");
   return (
-    <div className="m-2">
+    <div className="p-2 min-h-screen bg-bgLight text-textLight dark:text-textDark dark:bg-bgDark">
       <FormNav active={activeTab} setActive={setActiveTab} />
 
       {activeTab === 1 && <Account />}
