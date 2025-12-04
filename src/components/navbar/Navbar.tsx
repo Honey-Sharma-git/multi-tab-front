@@ -3,7 +3,7 @@ import { LANGUAGES } from "../../constants/global-constants";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 const Navbar = memo(() => {
-  const lang = useContext(LanguageContext);
+  const { lang } = useContext(LanguageContext);
   console.log("Navbar rendered");
 
   return (

@@ -1,16 +1,16 @@
 import { useContext, useMemo } from "react";
 import { LANGUAGES } from "../../../constants/global-constants";
 import { LanguageContext } from "../../../contexts/LanguageContext";
+import UserSettingLayout from "../UserSettingLayout";
 
 interface Props {
   onStatusChange: (status: string) => void;
   status: string;
-  title: string;
 }
 
 const Status = (props: Props) => {
-  const lang = useContext(LanguageContext);
-  const { status, onStatusChange, title } = props;
+  const { lang } = useContext(LanguageContext);
+  const { status, onStatusChange } = props;
 
   const statues = useMemo(() => {
     return [
@@ -39,10 +39,7 @@ const Status = (props: Props) => {
 
   console.log("Status rendered");
   return (
-    <div className="flex flex-col gap-1 justify-center border p-2 rounded-lg">
-      <h2 className="text-xl">{title}</h2>
-      <hr className="border" />
-
+    <UserSettingLayout title={LANGUAGES[lang].USER_STATUS}>
       <label htmlFor="status">{LANGUAGES[lang].SELECT_STATUS}</label>
 
       <select
@@ -60,7 +57,7 @@ const Status = (props: Props) => {
           );
         })}
       </select>
-    </div>
+    </UserSettingLayout>
   );
 };
 
