@@ -19,6 +19,11 @@ export const LANGUAGES = {
     ABOUT: "About",
     CONTACT: "Contact",
     CHOOSE_SYS_LANG: "Choose system language",
+    USER_VIEW_SETTINGS: "User's View Settings",
+    CHOOSE_THEME: "Choose theme",
+    LIGHT: "Light",
+    DARK: "Dark",
+    AUTO: "Auto",
   },
 
   HINDI: {
@@ -36,5 +41,10 @@ export const LANGUAGES = {
     ABOUT: "परिचय",
     CONTACT: "संपर्क",
     CHOOSE_SYS_LANG: "सिस्टम भाषा चुनें",
+    USER_VIEW_SETTINGS: "उपयोगकर्ता दृश्य सेटिंग्स",
+    CHOOSE_THEME: "थीम चुनें",
+    LIGHT: "हल्का",
+    DARK: "गहरा",
+    AUTO: "स्वचालित",
   },
 } as const;
