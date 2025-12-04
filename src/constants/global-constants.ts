@@ -1,3 +1,8 @@
+export const TEXT = {
+  HINDI: "हिन्दी",
+  ENGLISH: "English",
+} as const;
+
 export const LANGUAGES = {
   ENGLISH: {
     SELECT_STATUS: "Select Status",
@@ -13,6 +18,12 @@ export const LANGUAGES = {
     HOME: "Home",
     ABOUT: "About",
     CONTACT: "Contact",
+    CHOOSE_SYS_LANG: "Choose system language",
+    USER_VIEW_SETTINGS: "User's View Settings",
+    CHOOSE_THEME: "Choose theme",
+    LIGHT: "Light",
+    DARK: "Dark",
+    AUTO: "Auto",
   },
 
   HINDI: {
@@ -26,8 +37,14 @@ export const LANGUAGES = {
     ACCOUNT: "खाता",
     VIEWS: "दृश्य",
     STATUS: "स्थिति",
-    HOME: "Home",
-    ABOUT: "About",
-    CONTACT: "Contact",
+    HOME: "होम",
+    ABOUT: "परिचय",
+    CONTACT: "संपर्क",
+    CHOOSE_SYS_LANG: "सिस्टम भाषा चुनें",
+    USER_VIEW_SETTINGS: "उपयोगकर्ता दृश्य सेटिंग्स",
+    CHOOSE_THEME: "थीम चुनें",
+    LIGHT: "हल्का",
+    DARK: "गहरा",
+    AUTO: "स्वचालित",
   },
-};
+} as const;
